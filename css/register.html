@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Job Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="auth-container">
+        <section class="auth-header">
+            <h1>Create your account</h1>
+            <p>Join thousands of professionals today</p>
+        </section>
+
+        <form id="register-form" novalidate>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" class="form-control" placeholder="e.g. Alex Johnson"
+                    required aria-describedby="name-error">
+                <span id="name-error" class="error-message">Please enter your full name</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="e.g. alex@example.com"
+                    required aria-describedby="email-error">
+                <span id="email-error" class="error-message">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+                <label for="role">I am a...</label>
+                <select id="role" name="role" class="form-control" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="recruiter">Recruiter</option>
+                </select>
+                <span id="role-error" class="error-message">Please select your role</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="••••••••"
+                        required aria-describedby="password-error">
+                    <button type="button" class="password-toggle" id="toggle-password">Show</button>
+                </div>
+                <div class="password-rules">
+                    <p>Password requirements:</p>
+                    <ul>
+                        <li>At least 8 characters long</li>
+                        <li>Include at least one uppercase letter</li>
+                        <li>Include at least one number</li>
+                    </ul>
+                </div>
+                <span id="password-error" class="error-message">Password does not meet requirements</span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="form-control"
+                    placeholder="••••••••" required aria-describedby="confirm-error">
+                <span id="confirm-error" class="error-message">Passwords do not match</span>
+            </div>
+
+            <button type="submit" class="btn-primary" id="register-btn">Create Account</button>
+        </form>
+
+        <div class="social-auth">
+            <span>Or register with</span>
+        </div>
+
+        <div class="social-buttons">
+            <button class="btn-social" id="google-signup">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"
+                        fill="#FFC107" />
+                    <path
+                        d="m6.3 12.9 7.1 5.3C15.4 14.5 19.4 12 24 12c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2c-7.6 0-14.3 3.8-18.4 9.6l.7 1.3z"
+                        fill="#FF3D00" />
+                    <path
+                        d="M24 46c5.7 0 10.8-2.1 14.7-5.5l-7-5.8c-2.2 1.8-4.9 2.8-7.7 2.8-6.1 0-11-4.2-12.7-9.8L4.1 33.1c4 7.6 12 12.9 21.3 12.9z"
+                        fill="#4CAF50" />
+                    <path d="M44.5 20H24v8.5h11.8c-.4 2.1-1.4 3.9-2.9 5.3l7 5.8c4-3.7 6.6-9 6.6-15.1 0-1.3-.2-2.7-.5-4z"
+                        fill="#1976D2" />
+                </svg>
+                Google
+            </button>
+            <button class="btn-social" id="github-signup">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                        fill="currentColor" />
+                </svg>
+                GitHub
+            </button>
+        </div>
+
+        <footer class="auth-footer">
+            <p>Already have an account? <a href="index.html">Login</a></p>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
