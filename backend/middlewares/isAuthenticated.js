@@ -20,6 +20,12 @@ const isAuthenticated = async (req, res, next) => {
         next(); //if evrything is fine then only move to next step otherwise it will return error response and stop the process there only
     } catch (error) {
         console.log(error);
+
+        //do it when needed ok
+        // return res.status(401).json({
+        //     message: "Authentication failed",
+        //     success: false
+        // });
     }
 }
 export default isAuthenticated;

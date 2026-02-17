@@ -46,6 +46,13 @@ export const register = async (req, res) => {
         });
     } catch (error) {
         console.log(error);
+
+        //do it when needed ok
+        // return res.status(500).json({
+        //     message: "Internal Server Error",
+        //     success: false
+        // });
+
     }
 }
 
@@ -97,13 +104,19 @@ export const login = async (req, res) => {
             profile: user.profile
         }
 
-        return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({
+        return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: 'strict' }).json({ //write ---  httpOnly: true   -- to prevent cross site scripting attack and sameSite:'strict' to prevent cross site request forgery attack
             message: `Welcome back ${user.fullname}`,
             user,
             success: true
         })
     } catch (error) {
         console.log(error);
+
+        //do it when needed ok
+        // return res.status(500).json({
+        //     message: "Internal Server Error",
+        //     success: false
+        // });
     }
 }
 
@@ -116,6 +129,12 @@ export const logout = async (req, res) => {
         })
     } catch (error) {
         console.log(error);
+
+        //do it when needed ok
+        // return res.status(500).json({
+        //     message: "Internal Server Error",
+        //     success: false
+        // });
     }
 }
 
@@ -189,5 +208,11 @@ export const updateProfile = async (req, res) => {
 
     } catch (error) {
         console.log(error);
+
+        //do it when needed ok
+        // return res.status(500).json({
+        //     message: "Internal Server Error",
+        //     success: false
+        // });
     }
 }
